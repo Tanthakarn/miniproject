@@ -41,13 +41,13 @@ body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
       </div>
     </div>
 </header>
-<h2>ข้อมูลลูกค้า</h2>
+<h2>ข้อมูลสถานี</h2>
 		<?php
 		$sql ="SELECT * FROM station";
 		$objQuery = mysqli_query($con,$sql);
 		echo "<table border='1px'>";
         echo "<tr>";
-            echo "<td>รหัสบัตรประชาชน</td>"; echo"<td>ชื่อผู้ใช้</td>"; echo"<td>แก้ไข</td>";
+            echo "<td>รหัสสถานี</td>"; echo"<td>ชื่อสถานี</td>"; 
         echo "</tr>";
 		while($objResult=@mysqli_fetch_array($objQuery,MYSQLI_ASSOC)){
 			$stn_id=$objResult["stn_id"];
@@ -99,7 +99,7 @@ body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
 		}
 		
 	?>
-	<h2>ข้อมูลลูกค้า</h2>
+	<h2>ข้อมูลตารางเวลาเดินรถ</h2>
 	</form>
 </body>
 </html>

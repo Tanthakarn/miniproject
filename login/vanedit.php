@@ -21,6 +21,7 @@
         $objQuery = mysqli_query($con,$sql);
         ($objResult=@mysqli_fetch_array($objQuery,MYSQLI_ASSOC));
         $car_brand=trim($objResult["car_brand"]);
+        $car_user=trim($objResult["car_user"]);
         $car_number=trim($objResult["car_number"]);
      
         
@@ -31,6 +32,7 @@
             <form id="form_add" name="form_add" method="POST" action="editvan.php"  enctype="multipart/form-data">
                 <div style="padding:5px">ทะเบียนรถยนต์<input type="hidden" id="car_id" name="car_id" value="<?php echo $car_id;?>"placeholder="ทะเบียนรถยนต์"></div>
                 <div style="padding:5px">เบรนด์รถ<input type="text" id="car_brand" name="car_brand" value="<?php echo $car_brand;?>"placeholder="เบรนด์รถ"></div>
+                <div style="padding:5px">ชื่อพนักงานขับรถ<input type="text" id="car_user" name="car_user" value="<?php echo $car_user;?>"placeholder="ชื่อพนักงานขับรถ"></div>
                 <div style="padding:5px">เลขประจำตัวรถ<input type="text" id="car_number" name="car_number" value="<?php echo $car_number;?>"placeholder="เลขประจำตัวรถ"></div>
                 <div style="padding:5px"><button type = "button" id="bt_submit" name="bt_submit" Onclick="edit_van()"> บันทึก</div>
                

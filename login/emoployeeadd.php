@@ -15,7 +15,7 @@
         </script>
     <body>
         <div align="center">
-            <h1>เพื่มข้อมูลหนัง</h1>
+            <h1>เพื่มข้อมูลพนักงาน</h1>
             <form id="form_add" name="form_add" method="POST" action="addemoployee.php" enctype="multipart/form-data">
             <div style="padding:5px">รหัสบัตรประจำตัวประชาชน<input type="text" id="emp_id" name="emp_id" placeholder="รหัสประจำตัวประชาชน"></div>
                 <div style="padding:5px">ชื่อผู้ใช้<input type="text" id="emp_user" name="emp_user" placeholder="ชื่อผู้ใชงาน"></div>

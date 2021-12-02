@@ -24,6 +24,10 @@
         $emp_name=trim($objResult["emp_name"]);
         $emp_tel=trim($objResult["emp_tel"]);
         $emp_add=trim($objResult["emp_add"]);
+        $emp_bird=trim($objResult["emp_bird"]);
+        $emp_sex=trim($objResult["emp_sex"]);
+        $emp_level=trim($objResult["emp_level"]);
+        
         
     ?>
     <body>
@@ -35,6 +39,9 @@
                 <div style="padding:5px">ชื่อ-สกุล<input id="emp_name" name="emp_name" value="<?php echo $emp_name;?>"placeholder="ชื่อ-สกุล"></input></div>
                 <div style="padding:5px">เบอร์โทรศัพท์<input type="text" id="emp_tel" name="emp_tel" value="<?php echo $emp_tel;?>"placeholder="เบอร์โทรศัพท์"></div>
                 <div style="padding:5px">ที่อยู่<textarea id="emp_add" name="emp_add" placeholder="ที่อยู่"><?php echo $emp_add;?></textarea></div>
+                <div style="padding:5px">วันเกิด<input type="text" id="emp_bird" name="emp_bird" value="<?php echo $emp_bird;?>"placeholder="วันเกิด"></div>
+                <div style="padding:5px">เพศ<input type="text" id="emp_sex" name="emp_sex" value="<?php echo $emp_sex;?>"placeholder="ชาย 1 หญิง 0"></div>
+                <div style="padding:5px">ตำแหน่ง<input type="text" id="emp_level" name="emp_level" value="<?php echo $emp_level;?>"placeholder="พนักงาน 1 ผู้จัดการ 0"></div>
                 <div style="padding:5px"><button type = "button" id="bt_submit" name="bt_submit" Onclick="edit_emp()"> บันทึกข้อมูลพนักงาน</div>
                
             </form>

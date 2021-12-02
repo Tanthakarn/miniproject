@@ -55,19 +55,21 @@ body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
 		$objQuery = mysqli_query($con,$sql);
 		echo "<table border='1px',>";
         echo "<tr>";
-            echo "<td>ทะเบียนรถตู้</td>"; echo"<td>รุ่น</td>"; echo"<td>รหัสรถ</td>"; echo"<td>แก้ไข</td>"; 
+            echo "<td>ทะเบียนรถตู้</td>"; echo"<td>รุ่น</td>";echo"<td>ชื่อพนักงานขับรถ</td>";echo"<td>รหัสรถ</td>"; echo"<td>แก้ไข</td>"; 
         echo "</tr>";
 		while($objResult=@mysqli_fetch_array($objQuery,MYSQLI_ASSOC)){
 			$car_id=$objResult["car_id"];
 			$car_brand=$objResult["car_brand"];
+      $car_user=$objResult["car_user"];
 			$car_number=$objResult["car_number"];
 	
 			echo "<tr>";
 				echo "<td>".$car_id."</td>";
 				echo "<td>".$car_brand."</td>";
+        echo "<td>".$car_user."</td>";
 				echo "<td>".$car_number."</td>";
 				echo "<td><a href= 'vanedit.php?car_id=".$car_id."'>แก้ไข</a></td>";
-				echo "<td><a href='del_movie.php?emp_id=".$emp_id."'>ลบ</a></td>";
+				echo "<td><a href='delvan.php?car_id=".$car_id."'>ลบ</a></td>";
 				
 			echo "</tr>";  
 		}

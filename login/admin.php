@@ -48,7 +48,7 @@ body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
 		$objQuery = mysqli_query($con,$sql);
 		echo "<table border='3px'>";
         echo "<tr>";
-            echo "<td>รหัสบัตรประชาชน</td>"; echo"<td>ชื่อผู้ใช้</td>"; echo"<td>ชื่อ-สกุล</td>";echo"<td>ที่อยู่</td>";echo"<td>เบอร์โทรศัพท์</td>";echo"<td>แก้ไข</td>";
+            echo "<td>รหัสบัตรประชาชน</td>"; echo"<td>ชื่อผู้ใช้</td>"; echo"<td>ชื่อ-สกุล</td>";echo"<td>ที่อยู่</td>";echo"<td>เบอร์โทรศัพท์</td>";echo"<td>วันเกิด</td>";echo"<td>เพศ</td>";echo"<td>ตำแหน่ง</td>";echo"<td>แก้ไข</td>";
         echo "</tr>";
 		while($objResult=@mysqli_fetch_array($objQuery,MYSQLI_ASSOC)){
 			$emp_id=$objResult["emp_id"];
@@ -56,6 +56,9 @@ body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
 			$emp_name=$objResult["emp_name"];
 			$emp_add=$objResult["emp_add"];
 			$emp_tel=$objResult["emp_tel"];
+			$emp_bird=$objResult["emp_bird"];
+			$emp_sex=$objResult["emp_sex"];
+			$emp_level=$objResult["emp_level"];
 	
 			echo "<tr>";
 				echo "<td >".$emp_id."</td>";
@@ -63,6 +66,9 @@ body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
 				echo "<td>".$emp_name."</td>";
 				echo "<td>".$emp_add."</td>";
 				echo "<td>".$emp_tel."</td>"; 
+				echo "<td>".$emp_bird."</td>"; 
+				echo "<td>".$emp_sex."</td>"; 
+				echo "<td>".$emp_level."</td>"; 
 				echo "<td><a href='emoployeeedit.php?emp_id=".$emp_id."'>แก้ไข</a></td>";
 				echo "<td><a href='delemoplyee.php?emp_id=".$emp_id."'>ลบ</a></td>";
 				
